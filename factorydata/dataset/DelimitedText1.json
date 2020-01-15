@@ -17,33 +17,43 @@
 		},
 		"schema": [
 			{
+				"name": "id",
 				"type": "String"
 			},
 			{
+				"name": "name",
 				"type": "String"
 			},
 			{
+				"name": "person",
 				"type": "String"
 			},
 			{
+				"name": "number",
 				"type": "String"
 			},
 			{
+				"name": "amount1",
 				"type": "String"
 			},
 			{
+				"name": "amount2",
 				"type": "String"
 			},
 			{
+				"name": "amount3",
 				"type": "String"
 			},
 			{
+				"name": "somestring",
 				"type": "String"
 			},
 			{
+				"name": "category",
 				"type": "String"
 			},
 			{
+				"name": "amount4",
 				"type": "String"
 			}
 		]
