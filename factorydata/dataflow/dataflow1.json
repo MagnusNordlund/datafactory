@@ -12,9 +12,17 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [],
-			"script": "\n\nsource(output(\n\t\tid as integer '000',\n\t\tname as string,\n\t\tperson as string,\n\t\tnumber as integer '000',\n\t\tamount1 as decimal(10,0),\n\t\tamount2 as decimal(10,0),\n\t\tamount3 as decimal(10,0),\n\t\tsomestring as string,\n\t\tcategory as string,\n\t\tamount4 as decimal(10,0)\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\trowUrlColumn: 'filename') ~> source1"
+			"script": "\n\nsource(output(\n\t\tid as integer '000',\n\t\tname as string,\n\t\tperson as string,\n\t\tnumber as integer '000',\n\t\tamount1 as decimal(10,0),\n\t\tamount2 as decimal(10,0),\n\t\tamount3 as decimal(10,0),\n\t\tsomestring as string,\n\t\tcategory as string,\n\t\tamount4 as decimal(10,0)\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\trowUrlColumn: 'filename') ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table') ~> sink1"
 		}
 	}
 }
