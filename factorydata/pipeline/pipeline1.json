@@ -26,8 +26,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"tableOption": "autoCreate"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -120,16 +119,6 @@
 								},
 								"sink": {
 									"name": "Column9",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"type": "String",
-									"ordinal": 10
-								},
-								"sink": {
-									"name": "Column10",
 									"type": "String"
 								}
 							}
