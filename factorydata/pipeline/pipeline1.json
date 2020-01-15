@@ -1,6 +1,115 @@
 {
 	"name": "pipeline1",
 	"properties": {
+		"activities": [
+			{
+				"name": "Get from nz",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "industry",
+									"type": "String"
+								},
+								"sink": {
+									"name": "industry",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "level",
+									"type": "String"
+								},
+								"sink": {
+									"name": "level",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "size",
+									"type": "String"
+								},
+								"sink": {
+									"name": "size",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "line_code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "line_code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "value",
+									"type": "String"
+								},
+								"sink": {
+									"name": "value",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "BusinessOperatonsSurvey",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "nzdata",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": []
 	}
 }
