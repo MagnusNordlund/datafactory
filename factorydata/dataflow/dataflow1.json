@@ -1,0 +1,20 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "\n\nsource(output(\n\t\tid as integer '000',\n\t\tname as string,\n\t\tperson as string,\n\t\tnumber as integer '000',\n\t\tamount1 as decimal(10,0),\n\t\tamount2 as decimal(10,0),\n\t\tamount3 as decimal(10,0),\n\t\tsomestring as string,\n\t\tcategory as string,\n\t\tamount4 as decimal(10,0)\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\trowUrlColumn: 'filename') ~> source1"
+		}
+	}
+}
