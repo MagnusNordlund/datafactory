@@ -1,0 +1,106 @@
+{
+	"name": "DataDestination_New1",
+	"properties": {
+		"description": "Connect to your data destination store.",
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "policyID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "statecode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "county",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eq_site_limit",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "hu_site_limit",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "fl_site_limit",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "fr_site_limit",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "tiv_2011",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "tiv_2012",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "eq_site_deductible",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "hu_site_deductible",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "fl_site_deductible",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "fr_site_deductible",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "point_latitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "point_longitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "line",
+				"type": "varchar"
+			},
+			{
+				"name": "construction",
+				"type": "varchar"
+			},
+			{
+				"name": "point_granularity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GeoLocation",
+				"type": "xlentsql.sys.geography"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[FL_insurance]"
+		}
+	}
+}

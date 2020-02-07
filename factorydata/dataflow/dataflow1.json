@@ -1,0 +1,32 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DataDestination_New1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Aggregate1"
+				}
+			],
+			"script": "source(output(\n\t\tpolicyID as string,\n\t\tstatecode as string,\n\t\tcounty as string,\n\t\teq_site_limit as double,\n\t\thu_site_limit as double,\n\t\tfl_site_limit as double,\n\t\tfr_site_limit as double,\n\t\ttiv_2011 as double,\n\t\ttiv_2012 as double,\n\t\teq_site_deductible as double,\n\t\thu_site_deductible as double,\n\t\tfl_site_deductible as double,\n\t\tfr_site_deductible as double,\n\t\tpoint_latitude as double,\n\t\tpoint_longitude as double,\n\t\tline as string,\n\t\tconstruction as string,\n\t\tpoint_granularity as integer,\n\t\tGeoLocation as any\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table',\n\tstaged: false) ~> source1\nsource1 aggregate(groupBy(county,\n\t\tstatecode),\n\teq_site_deductible = ERROR_FUNCTION('')) ~> Aggregate1\nAggregate1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+		}
+	}
+}
