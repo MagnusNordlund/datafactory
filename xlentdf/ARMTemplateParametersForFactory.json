@@ -8,17 +8,20 @@
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
-		"xlentstorage_connectionString": {
-			"value": ""
-		},
-		"xlentfilestore_password": {
+		"AzureSynapseAnalytics1_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
-		"AzureSynapseAnalytics1_connectionString": {
+		"xlentfilestore_password": {
 			"value": ""
+		},
+		"xlentstorage_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://xlentkv.vault.azure.net/"
 		},
 		"OData1_properties_typeProperties_url": {
 			"value": "https://services.odata.org/V3/Northwind/Northwind.svc/"
@@ -34,9 +37,6 @@
 		},
 		"xlentfilestore_properties_typeProperties_userId": {
 			"value": "xlentstorage"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"value": "https://xlentkv.vault.azure.net/"
 		}
 	}
 }

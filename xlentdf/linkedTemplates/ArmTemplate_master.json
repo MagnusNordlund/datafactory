@@ -11,21 +11,25 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
 		},
-		"xlentstorage_connectionString": {
+		"AzureSynapseAnalytics1_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'xlentstorage'"
-		},
-		"xlentfilestore_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'xlentfilestore'"
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
 		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
-		"AzureSynapseAnalytics1_connectionString": {
+		"xlentfilestore_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
+			"metadata": "Secure string for 'password' of 'xlentfilestore'"
+		},
+		"xlentstorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'xlentstorage'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://xlentkv.vault.azure.net/"
 		},
 		"OData1_properties_typeProperties_url": {
 			"type": "string",
@@ -46,10 +50,6 @@
 		"xlentfilestore_properties_typeProperties_userId": {
 			"type": "string",
 			"defaultValue": "xlentstorage"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://xlentkv.vault.azure.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -81,17 +81,20 @@
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
-					"xlentstorage_connectionString": {
-						"value": "[parameters('xlentstorage_connectionString')]"
+					"AzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
 					},
 					"xlentfilestore_password": {
 						"value": "[parameters('xlentfilestore_password')]"
 					},
+					"xlentstorage_connectionString": {
+						"value": "[parameters('xlentstorage_connectionString')]"
+					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
-					"AzureSynapseAnalytics1_connectionString": {
-						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
 					"OData1_properties_typeProperties_url": {
 						"value": "[parameters('OData1_properties_typeProperties_url')]"
@@ -107,9 +110,6 @@
 					},
 					"xlentfilestore_properties_typeProperties_userId": {
 						"value": "[parameters('xlentfilestore_properties_typeProperties_userId')]"
-					},
-					"AzureKeyVault1_properties_typeProperties_baseUrl": {
-						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					}
 				}
 			},
