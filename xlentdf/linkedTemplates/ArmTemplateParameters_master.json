@@ -14,6 +14,12 @@
 		"xlentfilestore_password": {
 			"value": ""
 		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
 		"OData1_properties_typeProperties_url": {
 			"value": "https://services.odata.org/V3/Northwind/Northwind.svc/"
 		},
@@ -28,6 +34,9 @@
 		},
 		"xlentfilestore_properties_typeProperties_userId": {
 			"value": "xlentstorage"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://xlentkv.vault.azure.net/"
 		},
 		"containerUri": {
 			"value": ""
