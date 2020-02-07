@@ -1,0 +1,89 @@
+{
+	"name": "DataDestination",
+	"properties": {
+		"description": "Connect to your data destination store.",
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "policyID",
+				"type": "String"
+			},
+			{
+				"name": "statecode",
+				"type": "String"
+			},
+			{
+				"name": "county",
+				"type": "String"
+			},
+			{
+				"name": "eq_site_limit",
+				"type": "Double"
+			},
+			{
+				"name": "hu_site_limit",
+				"type": "Double"
+			},
+			{
+				"name": "fl_site_limit",
+				"type": "Double"
+			},
+			{
+				"name": "fr_site_limit",
+				"type": "Double"
+			},
+			{
+				"name": "tiv_2011",
+				"type": "Double"
+			},
+			{
+				"name": "tiv_2012",
+				"type": "Double"
+			},
+			{
+				"name": "eq_site_deductible",
+				"type": "Double"
+			},
+			{
+				"name": "hu_site_deductible",
+				"type": "Double"
+			},
+			{
+				"name": "fl_site_deductible",
+				"type": "Double"
+			},
+			{
+				"name": "fr_site_deductible",
+				"type": "Double"
+			},
+			{
+				"name": "point_latitude",
+				"type": "Double"
+			},
+			{
+				"name": "point_longitude",
+				"type": "Double"
+			},
+			{
+				"name": "line",
+				"type": "String"
+			},
+			{
+				"name": "construction",
+				"type": "String"
+			},
+			{
+				"name": "point_granularity",
+				"type": "Int32"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[FL_insurance]"
+		}
+	}
+}
