@@ -12,13 +12,21 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "stage_insurance",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "Aggregate1"
 				}
 			],
-			"script": "source(output(\n\t\tpolicyID as string,\n\t\tstatecode as string,\n\t\tcounty as string,\n\t\teq_site_limit as double,\n\t\thu_site_limit as double,\n\t\tfl_site_limit as double,\n\t\tfr_site_limit as double,\n\t\ttiv_2011 as double,\n\t\ttiv_2012 as double,\n\t\teq_site_deductible as double,\n\t\thu_site_deductible as double,\n\t\tfl_site_deductible as double,\n\t\tfr_site_deductible as double,\n\t\tpoint_latitude as double,\n\t\tpoint_longitude as double,\n\t\tline as string,\n\t\tconstruction as string,\n\t\tpoint_granularity as integer,\n\t\tGeoLocation as binary\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tisolationLevel: 'READ_COMMITTED',\n\tformat: 'table') ~> source1\nsource1 aggregate() ~> Aggregate1"
+			"script": "source(output(\n\t\tpolicyID as string,\n\t\tstatecode as string,\n\t\tcounty as string,\n\t\teq_site_limit as double,\n\t\thu_site_limit as double,\n\t\tfl_site_limit as double,\n\t\tfr_site_limit as double,\n\t\ttiv_2011 as double,\n\t\ttiv_2012 as double,\n\t\teq_site_deductible as double,\n\t\thu_site_deductible as double,\n\t\tfl_site_deductible as double,\n\t\tfr_site_deductible as double,\n\t\tpoint_latitude as double,\n\t\tpoint_longitude as double,\n\t\tline as string,\n\t\tconstruction as string,\n\t\tpoint_granularity as integer,\n\t\tGeoLocation as binary\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tisolationLevel: 'READ_COMMITTED',\n\tformat: 'table') ~> source1\nsource1 aggregate(groupBy(county,\n\t\tstatecode),\n\ttiv_2011 = sum(tiv_2011)) ~> Aggregate1\nAggregate1 sink(input(\n\t\tcountry as string,\n\t\tstate as string,\n\t\tvalue as double\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tcountry = county,\n\t\tstate = statecode,\n\t\tvalue = tiv_2011\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
