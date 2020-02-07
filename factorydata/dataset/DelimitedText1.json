@@ -1,0 +1,27 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "xlentfilestore",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "VISITS_2015JUL2DEC_fix.csv"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "VISIT_ID;CENTER_ID;PERSON_ID;HOME_CENTER_ID;CHECK_IN_DATE;CHECK_IN_TIME;CHECK_OUT_DATE;CHECK_OUT_TIME;CHECK_IN_RESULT;ETS",
+				"type": "String"
+			}
+		]
+	}
+}
