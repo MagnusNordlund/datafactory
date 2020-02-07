@@ -80,6 +80,9 @@
 			{
 				"name": "point_granularity",
 				"type": "Int32"
+			},
+			{
+				"name": "GeoLocation"
 			}
 		],
 		"typeProperties": {
