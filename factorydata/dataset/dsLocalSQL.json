@@ -1,5 +1,5 @@
 {
-	"name": "DataSource",
+	"name": "dsLocalSQL",
 	"properties": {
 		"description": "Connect to your data source store.",
 		"linkedServiceName": {
