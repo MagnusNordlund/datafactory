@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "xlentdf"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"xlentstorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'xlentstorage'"
+		},
+		"xlentfilestore_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'xlentfilestore'"
+		},
+		"OData1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://services.odata.org/V3/Northwind/Northwind.svc/"
+		},
+		"httpNZ_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://www.stats.govt.nz/assets/Uploads/Business-operations-survey/Business-operations-survey-2018/Download-data/business-operations-survey-2018-business-finance-csv.csv"
+		},
+		"sample_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://www.sample-videos.com/csv/Sample-Spreadsheet-5000-rows.csv"
+		},
+		"xlentfilestore_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "//xlentstorage.file.core.windows.net/dump"
+		},
+		"xlentfilestore_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "xlentstorage"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"xlentstorage_connectionString": {
+						"value": "[parameters('xlentstorage_connectionString')]"
+					},
+					"xlentfilestore_password": {
+						"value": "[parameters('xlentfilestore_password')]"
+					},
+					"OData1_properties_typeProperties_url": {
+						"value": "[parameters('OData1_properties_typeProperties_url')]"
+					},
+					"httpNZ_properties_typeProperties_url": {
+						"value": "[parameters('httpNZ_properties_typeProperties_url')]"
+					},
+					"sample_properties_typeProperties_url": {
+						"value": "[parameters('sample_properties_typeProperties_url')]"
+					},
+					"xlentfilestore_properties_typeProperties_host": {
+						"value": "[parameters('xlentfilestore_properties_typeProperties_host')]"
+					},
+					"xlentfilestore_properties_typeProperties_userId": {
+						"value": "[parameters('xlentfilestore_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
