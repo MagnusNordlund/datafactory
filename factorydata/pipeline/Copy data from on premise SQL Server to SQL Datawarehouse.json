@@ -18,13 +18,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlSource"
+						"type": "SqlSource",
+						"sqlReaderQuery": "select * from [FL_insurance]"
 					},
 					"sink": {
 						"type": "SqlDWSink",
 						"writeBatchSize": 10000
 					},
-					"enableStaging": true,
+					"enableStaging": false,
 					"dataIntegrationUnits": 0,
 					"translator": {
 						"type": "TabularTranslator",
