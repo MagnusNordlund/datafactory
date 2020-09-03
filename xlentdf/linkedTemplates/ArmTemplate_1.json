@@ -425,7 +425,7 @@
 								"mappings": [
 									{
 										"source": {
-											"path": "$['asab:envelope']"
+											"path": "[['def:lmprodukt']"
 										},
 										"sink": {
 											"name": "envelope",
@@ -433,6 +433,7 @@
 										}
 									}
 								],
+								"collectionReference": "$['asab:envelope']['asab:produkter']['def:lmprodukt']",
 								"mapComplexValuesToString": true
 							}
 						},
