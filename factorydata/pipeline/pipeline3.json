@@ -44,7 +44,7 @@
 								}
 							}
 						],
-						"collectionReference": "$['asab:envelope']['asab:produkter']['def:lmprodukt']",
+						"collectionReference": "$['asab:envelope']['asab:produkter']",
 						"mapComplexValuesToString": true
 					}
 				},
