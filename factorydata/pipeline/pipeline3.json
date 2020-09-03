@@ -36,6 +36,7 @@
 						"mappings": [
 							{
 								"source": {
+									"type": "object",
 									"path": "['def:lmprodukt']"
 								},
 								"sink": {
