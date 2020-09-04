@@ -330,11 +330,6 @@
 									"name": "tom_datum",
 									"type": "String"
 								}
-							},
-							{
-								"source": {
-									"path": "$['artiklar']['@timestamp']"
-								}
 							}
 						],
 						"collectionReference": "$['artiklar']['artikel']",
