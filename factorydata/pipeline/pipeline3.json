@@ -36,16 +36,185 @@
 						"mappings": [
 							{
 								"source": {
-									"type": "object",
-									"path": "['def:lmprodukt']"
+									"path": "['forvaring']['forvaringsfall']['@forvaringsfall_typ']"
+								}
+							},
+							{
+								"source": {
+									"path": "['forvaring']['forvaringsfall']['@hallbarhet_enhet']"
+								}
+							},
+							{
+								"source": {
+									"path": "['forvaring']['forvaringsfall']['@forvarings_temperatur']"
+								}
+							},
+							{
+								"source": {
+									"path": "['forvaring']['forvaringsfall']['@forvaringsfallkod_ext']"
+								}
+							},
+							{
+								"source": {
+									"path": "['forvaring']['forvaringsfall']['@pharmaceutical_product_id_npl']"
+								}
+							},
+							{
+								"source": {
+									"path": "['utbytbarheter']"
 								},
 								"sink": {
 									"name": "envelope",
 									"type": "String"
 								}
+							},
+							{
+								"source": {
+									"path": "['@version']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@varunummer']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@artikel_benamning']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@streckkod']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@antal_klartext']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplpackid']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@artikel_utbytbar']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@forpackning_text']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@varutyp']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@endast_dos']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@endast_sjukhusbruk']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@sarskilt_lakemedel']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@enhet_styrka']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplsubstansid']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@original_nplid']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@gruppvarunummer']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplid']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@produktnamn']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@styrka_klartext']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@receptbelagd']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@produkt_typ']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@lakemedel']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@utbytbar']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@veterinarlakemedel']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@atc_kod']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@lakemedelsform']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@narkotika_klass']"
+								}
+							},
+							{
+								"source": {
+									"path": "['@styrka']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['artiklar']['@timestamp']"
+								}
 							}
 						],
-						"collectionReference": "$['asab:envelope']['asab:produkter']",
+						"collectionReference": "$['artiklar']['artikel']",
 						"mapComplexValuesToString": true
 					}
 				},
