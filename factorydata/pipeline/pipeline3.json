@@ -330,6 +330,15 @@
 									"name": "tom_datum",
 									"type": "String"
 								}
+							},
+							{
+								"source": {
+									"path": "['forvaringsfall']"
+								},
+								"sink": {
+									"name": "forvaring",
+									"type": "String"
+								}
 							}
 						],
 						"collectionReference": "$['artiklar']['artikel']",
