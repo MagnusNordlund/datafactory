@@ -12,11 +12,147 @@
 				"name": "id",
 				"type": "int",
 				"precision": 10
+			},
+			{
+				"name": "version",
+				"type": "nvarchar"
+			},
+			{
+				"name": "varunummer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "artikel_benamning",
+				"type": "nvarchar"
+			},
+			{
+				"name": "streckkod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "antal_klartext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "nplpackid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "artikel_utbytbar",
+				"type": "nvarchar"
+			},
+			{
+				"name": "forpackning_text",
+				"type": "nvarchar"
+			},
+			{
+				"name": "varutyp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "endast_dos",
+				"type": "nvarchar"
+			},
+			{
+				"name": "endast_sjukhusbruk",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sarskilt_lakemedel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "enhet_styrka",
+				"type": "nvarchar"
+			},
+			{
+				"name": "nplsubstansid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "original_nplid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "gruppvarunummer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "nplid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "produktnamn",
+				"type": "nvarchar"
+			},
+			{
+				"name": "styrka_klartext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "receptbelagd",
+				"type": "nvarchar"
+			},
+			{
+				"name": "produkt_typ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "lakemedel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utbytbar",
+				"type": "nvarchar"
+			},
+			{
+				"name": "veterinarlakemedel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "atc_kod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "lakemedelsform",
+				"type": "nvarchar"
+			},
+			{
+				"name": "narkotika_klass",
+				"type": "nvarchar"
+			},
+			{
+				"name": "styrka",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utbytbarhet_form_grupp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utbytbarhet_styrka_grupp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utbytbarhet_substans_grupp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "gfrom_datum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tom_datum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "forvaring",
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "vara2"
+			"table": "vara"
 		}
 	}
 }
