@@ -36,15 +36,6 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "['forvaringsfall']['@forvaringsfall_typ']"
-								},
-								"sink": {
-									"name": "forvaring",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"path": "['@version']"
 								},
 								"sink": {
