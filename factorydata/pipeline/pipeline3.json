@@ -36,36 +36,313 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "['forvaring']['forvaringsfall']['@forvaringsfall_typ']"
-								}
-							},
-							{
-								"source": {
-									"path": "['forvaring']['forvaringsfall']['@hallbarhet_enhet']"
-								}
-							},
-							{
-								"source": {
-									"path": "['forvaring']['forvaringsfall']['@forvarings_temperatur']"
-								}
-							},
-							{
-								"source": {
-									"path": "['forvaring']['forvaringsfall']['@forvaringsfallkod_ext']"
-								}
-							},
-							{
-								"source": {
-									"path": "['forvaring']['forvaringsfall']['@pharmaceutical_product_id_npl']"
-								}
-							},
-							{
-								"source": {
-									"path": "['utbytbarheter']"
+									"path": "['forvaringsfall']['@forvaringsfall_typ']"
 								},
 								"sink": {
-									"name": "envelope",
+									"name": "forvaring",
 									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@version']"
+								},
+								"sink": {
+									"name": "version",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@varunummer']"
+								},
+								"sink": {
+									"name": "varunummer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@artikel_benamning']"
+								},
+								"sink": {
+									"name": "artikel_benamning",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@streckkod']"
+								},
+								"sink": {
+									"name": "streckkod",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@antal_klartext']"
+								},
+								"sink": {
+									"name": "antal_klartext",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplpackid']"
+								},
+								"sink": {
+									"name": "nplpackid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@artikel_utbytbar']"
+								},
+								"sink": {
+									"name": "artikel_utbytbar",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@forpackning_text']"
+								},
+								"sink": {
+									"name": "forpackning_text",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@varutyp']"
+								},
+								"sink": {
+									"name": "varutyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@endast_dos']"
+								},
+								"sink": {
+									"name": "endast_dos",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@endast_sjukhusbruk']"
+								},
+								"sink": {
+									"name": "endast_sjukhusbruk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@sarskilt_lakemedel']"
+								},
+								"sink": {
+									"name": "sarskilt_lakemedel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplsubstansid']"
+								},
+								"sink": {
+									"name": "nplsubstansid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@original_nplid']"
+								},
+								"sink": {
+									"name": "original_nplid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@gruppvarunummer']"
+								},
+								"sink": {
+									"name": "gruppvarunummer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@nplid']"
+								},
+								"sink": {
+									"name": "nplid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@produktnamn']"
+								},
+								"sink": {
+									"name": "produktnamn",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@styrka_klartext']"
+								},
+								"sink": {
+									"name": "styrka_klartext",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@receptbelagd']"
+								},
+								"sink": {
+									"name": "receptbelagd",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@produkt_typ']"
+								},
+								"sink": {
+									"name": "produkt_typ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@lakemedel']"
+								},
+								"sink": {
+									"name": "lakemedel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@utbytbar']"
+								},
+								"sink": {
+									"name": "utbytbar",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@veterinarlakemedel']"
+								},
+								"sink": {
+									"name": "veterinarlakemedel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@atc_kod']"
+								},
+								"sink": {
+									"name": "atc_kod",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@lakemedelsform']"
+								},
+								"sink": {
+									"name": "lakemedelsform",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@narkotika_klass']"
+								},
+								"sink": {
+									"name": "narkotika_klass",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@enhet_styrka']"
+								},
+								"sink": {
+									"name": "enhet_styrka",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@styrka']"
+								},
+								"sink": {
+									"name": "styrka",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@utbytbarhet_form_grupp']"
+								},
+								"sink": {
+									"name": "utbytbarhet_form_grupp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@utbytbarhet_styrka_grupp']"
+								},
+								"sink": {
+									"name": "utbytbarhet_styrka_grupp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@utbytbarhet_substans_grupp']"
+								},
+								"sink": {
+									"name": "utbytbarhet_substans_grupp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@gfrom_datum']"
+								},
+								"sink": {
+									"name": "gfrom_datum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['@tom_datum']"
+								},
+								"sink": {
+									"name": "tom_datum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['artiklar']['@timestamp']"
 								}
 							}
 						],
